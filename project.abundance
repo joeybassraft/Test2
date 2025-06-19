@@ -14,14 +14,19 @@
             "x": 0.98,
             "y": 0.5,
             "uniqueID": "dfcdd39b-a0c0-4d5d-bda5-386513940570",
-            "ioValues": [],
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": "a77a7e71-3be0-4ddd-8ad7-02bf3714f39e"
+                }
+            ],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
             "atomType": "Import",
             "name": "Import",
-            "x": 0.41088435374149657,
-            "y": 0.5630026809651475,
+            "x": 0.4142857142857143,
+            "y": 0.5603217158176943,
             "uniqueID": "7969c197-5bb7-47d6-a8de-05fff34663ec",
             "ioValues": [],
             "description": "Import Atom, let's you choose a type of file to import and use in your design.",
@@ -30,43 +35,90 @@
             "SVGwidth": 34
         },
         {
-            "atomType": "Extrude",
-            "name": "Extrude",
-            "x": 0.6333333333333333,
-            "y": 0.6273458445040214,
-            "uniqueID": "f8f489b0-6423-4a2b-a1f6-c02d15f33c5a",
-            "ioValues": [
-                {
-                    "name": "geometry",
-                    "ioValue": "7969c197-5bb7-47d6-a8de-05fff34663ec"
-                },
-                {
-                    "name": "height",
-                    "ioValue": 0.13
-                }
-            ],
-            "description": "Extrudes a 2D shape. Input can be negitive. "
-        },
-        {
             "atomType": "Import",
             "name": "Import",
-            "x": 0.41156462585034015,
-            "y": 0.3646112600536193,
+            "x": 0.4068027210884354,
+            "y": 0.23592493297587133,
             "uniqueID": "ccdd557e-1584-4dd5-bedf-337b066b80cf",
             "ioValues": [],
             "description": "Import Atom, let's you choose a type of file to import and use in your design.",
             "fileName": "Bassraft.svg",
             "type": "SVG",
-            "SVGwidth": 10
+            "SVGwidth": 30
+        },
+        {
+            "atomType": "Rotate",
+            "name": "Rotate",
+            "x": 0.463265306122449,
+            "y": 0.26005361930294907,
+            "uniqueID": "1c16077f-97b0-4e75-93ea-58e556394d83",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "ccdd557e-1584-4dd5-bedf-337b066b80cf"
+                },
+                {
+                    "name": "x-axis degrees",
+                    "ioValue": 0
+                },
+                {
+                    "name": "y-axis degrees",
+                    "ioValue": 0
+                },
+                {
+                    "name": "z-axis degrees",
+                    "ioValue": 90
+                }
+            ],
+            "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.5523809523809524,
+            "y": 0.4369973190348525,
+            "uniqueID": "a77a7e71-3be0-4ddd-8ad7-02bf3714f39e",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "1c16077f-97b0-4e75-93ea-58e556394d83"
+                },
+                {
+                    "name": "height",
+                    "ioValue": "7969c197-5bb7-47d6-a8de-05fff34663ec"
+                }
+            ],
+            "description": "Extrudes a 2D shape. Input can be negitive. "
         }
     ],
     "allConnectors": [
         {
             "ap1Name": "geometry",
+            "ap2Name": "height",
+            "ap2Primary": false,
+            "ap1ID": "7969c197-5bb7-47d6-a8de-05fff34663ec",
+            "ap2ID": "a77a7e71-3be0-4ddd-8ad7-02bf3714f39e"
+        },
+        {
+            "ap1Name": "geometry",
             "ap2Name": "geometry",
             "ap2Primary": true,
-            "ap1ID": "7969c197-5bb7-47d6-a8de-05fff34663ec",
-            "ap2ID": "f8f489b0-6423-4a2b-a1f6-c02d15f33c5a"
+            "ap1ID": "ccdd557e-1584-4dd5-bedf-337b066b80cf",
+            "ap2ID": "1c16077f-97b0-4e75-93ea-58e556394d83"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": "1c16077f-97b0-4e75-93ea-58e556394d83",
+            "ap2ID": "a77a7e71-3be0-4ddd-8ad7-02bf3714f39e"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": "a77a7e71-3be0-4ddd-8ad7-02bf3714f39e",
+            "ap2ID": "dfcdd39b-a0c0-4d5d-bda5-386513940570"
         }
     ],
     "unitsKey": "Inches",
