@@ -168,8 +168,8 @@
         {
             "atomType": "Fusion",
             "name": "Fusion",
-            "x": 0.7020408163265306,
-            "y": 0.28686327077747986,
+            "x": 0.6972789115646258,
+            "y": 0.2949061662198391,
             "uniqueID": "d1372103-42b7-4549-9654-83b7b2fd46a4",
             "ioValues": [
                 {
@@ -187,8 +187,8 @@
         {
             "atomType": "Move",
             "name": "Move",
-            "x": 0.5891156462585034,
-            "y": 0.40214477211796246,
+            "x": 0.5843537414965987,
+            "y": 0.39946380697050937,
             "uniqueID": "849cb96c-9df6-4519-bdc5-5aacb798d33b",
             "ioValues": [
                 {
@@ -249,7 +249,7 @@
             "ioValues": [
                 {
                     "name": "geometry",
-                    "ioValue": ""
+                    "ioValue": "7c79e5a8-952b-4494-ac6d-74b14c24a58b"
                 },
                 {
                     "name": "height",
@@ -259,11 +259,49 @@
             "description": "Extrudes a 2D shape. Input can be negitive. "
         },
         {
+            "atomType": "Import",
+            "name": "Import",
+            "x": 0.1183673469387755,
+            "y": 0.24664879356568367,
+            "uniqueID": "93fa8fe7-8d3e-4ccc-b116-9f6d36fcaf80",
+            "ioValues": [],
+            "description": "Import Atom, let's you choose a type of file to import and use in your design.",
+            "fileName": "path1.svg",
+            "type": "SVG",
+            "SVGwidth": 72
+        },
+        {
+            "atomType": "Move",
+            "name": "Move",
+            "x": 0.17006802721088435,
+            "y": 0.3699731903485255,
+            "uniqueID": "7c79e5a8-952b-4494-ac6d-74b14c24a58b",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "93fa8fe7-8d3e-4ccc-b116-9f6d36fcaf80"
+                },
+                {
+                    "name": "xDist",
+                    "ioValue": -3.5
+                },
+                {
+                    "name": "yDist",
+                    "ioValue": 0
+                },
+                {
+                    "name": "zDist",
+                    "ioValue": -1
+                }
+            ],
+            "description": "Moves a shape laterally in X, Y, Z."
+        },
+        {
             "atomType": "Difference",
             "name": "Difference",
-            "x": 0.6952380952380952,
-            "y": 0.6166219839142091,
-            "uniqueID": "ac628040-565e-47a6-a448-739f7a4416ae",
+            "x": 0.7074829931972789,
+            "y": 0.47721179624664883,
+            "uniqueID": "191947c0-49f5-499c-8dbf-5808c00a904f",
             "ioValues": [
                 {
                     "name": "geometry1",
@@ -271,22 +309,10 @@
                 },
                 {
                     "name": "geometry2",
-                    "ioValue": "d1372103-42b7-4549-9654-83b7b2fd46a4"
+                    "ioValue": "2bf4b4b9-a8a4-47f9-8234-21b5c3323fe9"
                 }
             ],
             "description": "Subtracts shape two from shape one."
-        },
-        {
-            "atomType": "Import",
-            "name": "Import",
-            "x": 0.11904761904761904,
-            "y": 0.6058981233243967,
-            "uniqueID": "93fa8fe7-8d3e-4ccc-b116-9f6d36fcaf80",
-            "ioValues": [],
-            "description": "Import Atom, let's you choose a type of file to import and use in your design.",
-            "fileName": "path1.svg",
-            "type": "SVG",
-            "SVGwidth": 10
         }
     ],
     "allConnectors": [
@@ -337,7 +363,7 @@
             "ap2Name": "geometry1",
             "ap2Primary": false,
             "ap1ID": "e031bfe8-93c6-4715-a967-23d8f5125795",
-            "ap2ID": "ac628040-565e-47a6-a448-739f7a4416ae"
+            "ap2ID": "191947c0-49f5-499c-8dbf-5808c00a904f"
         },
         {
             "ap1Name": "geometry",
@@ -348,17 +374,31 @@
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "geometry2",
-            "ap2Primary": false,
-            "ap1ID": "d1372103-42b7-4549-9654-83b7b2fd46a4",
-            "ap2ID": "ac628040-565e-47a6-a448-739f7a4416ae"
-        },
-        {
-            "ap1Name": "geometry",
             "ap2Name": "Shape 3",
             "ap2Primary": false,
             "ap1ID": "849cb96c-9df6-4519-bdc5-5aacb798d33b",
             "ap2ID": "d1372103-42b7-4549-9654-83b7b2fd46a4"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry2",
+            "ap2Primary": false,
+            "ap1ID": "2bf4b4b9-a8a4-47f9-8234-21b5c3323fe9",
+            "ap2ID": "191947c0-49f5-499c-8dbf-5808c00a904f"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": "93fa8fe7-8d3e-4ccc-b116-9f6d36fcaf80",
+            "ap2ID": "7c79e5a8-952b-4494-ac6d-74b14c24a58b"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": "7c79e5a8-952b-4494-ac6d-74b14c24a58b",
+            "ap2ID": "2bf4b4b9-a8a4-47f9-8234-21b5c3323fe9"
         }
     ],
     "unitsKey": "Inches",
