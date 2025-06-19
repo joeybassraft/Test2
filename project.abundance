@@ -14,19 +14,14 @@
             "x": 0.9789115646258504,
             "y": 0.5067024128686327,
             "uniqueID": "dfcdd39b-a0c0-4d5d-bda5-386513940570",
-            "ioValues": [
-                {
-                    "name": "number or geometry",
-                    "ioValue": "bd06daa7-d64b-4c83-8da5-817f5c8deb32"
-                }
-            ],
+            "ioValues": [],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
             "atomType": "Import",
             "name": "Import",
-            "x": 0.4129251700680272,
-            "y": 0.5495978552278821,
+            "x": 0.41564625850340137,
+            "y": 0.5442359249329759,
             "uniqueID": "7969c197-5bb7-47d6-a8de-05fff34663ec",
             "ioValues": [],
             "description": "Import Atom, let's you choose a type of file to import and use in your design.",
@@ -44,13 +39,13 @@
             "description": "Import Atom, let's you choose a type of file to import and use in your design.",
             "fileName": "Bassraft.svg",
             "type": "SVG",
-            "SVGwidth": 30
+            "SVGwidth": 24
         },
         {
             "atomType": "Rotate",
             "name": "Rotate",
-            "x": 0.4666666666666667,
-            "y": 0.257372654155496,
+            "x": 0.4727891156462585,
+            "y": 0.26273458445040215,
             "uniqueID": "1c16077f-97b0-4e75-93ea-58e556394d83",
             "ioValues": [
                 {
@@ -75,8 +70,8 @@
         {
             "atomType": "Extrude",
             "name": "Extrude",
-            "x": 0.5578231292517006,
-            "y": 0.30294906166219837,
+            "x": 0.5551020408163265,
+            "y": 0.2680965147453083,
             "uniqueID": "117315c5-1386-47b3-8891-36c240aa18d3",
             "ioValues": [
                 {
@@ -91,11 +86,29 @@
             "description": "Extrudes a 2D shape. Input can be negitive. "
         },
         {
+            "atomType": "Assembly",
+            "name": "Assembly",
+            "x": 0.6414965986394559,
+            "y": 0.42627345844504017,
+            "uniqueID": "5e23bb93-9a33-420e-97e4-7cef7e677db5",
+            "ioValues": [
+                {
+                    "name": "Shape 1",
+                    "ioValue": "117315c5-1386-47b3-8891-36c240aa18d3"
+                },
+                {
+                    "name": "Shape 2",
+                    "ioValue": "0f4e9bef-7f3f-485f-80fd-5d5ffb033851"
+                }
+            ],
+            "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
+        },
+        {
             "atomType": "Extrude",
             "name": "Extrude",
-            "x": 0.5265306122448979,
+            "x": 0.4829931972789116,
             "y": 0.5442359249329759,
-            "uniqueID": "bd06daa7-d64b-4c83-8da5-817f5c8deb32",
+            "uniqueID": "0f4e9bef-7f3f-485f-80fd-5d5ffb033851",
             "ioValues": [
                 {
                     "name": "geometry",
@@ -103,7 +116,7 @@
                 },
                 {
                     "name": "height",
-                    "ioValue": "117315c5-1386-47b3-8891-36c240aa18d3"
+                    "ioValue": 0.13
                 }
             ],
             "description": "Extrudes a 2D shape. Input can be negitive. "
@@ -115,7 +128,7 @@
             "ap2Name": "geometry",
             "ap2Primary": true,
             "ap1ID": "7969c197-5bb7-47d6-a8de-05fff34663ec",
-            "ap2ID": "bd06daa7-d64b-4c83-8da5-817f5c8deb32"
+            "ap2ID": "0f4e9bef-7f3f-485f-80fd-5d5ffb033851"
         },
         {
             "ap1Name": "geometry",
@@ -133,17 +146,17 @@
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "height",
+            "ap2Name": "Shape 1",
             "ap2Primary": false,
             "ap1ID": "117315c5-1386-47b3-8891-36c240aa18d3",
-            "ap2ID": "bd06daa7-d64b-4c83-8da5-817f5c8deb32"
+            "ap2ID": "5e23bb93-9a33-420e-97e4-7cef7e677db5"
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "number or geometry",
+            "ap2Name": "Shape 2",
             "ap2Primary": false,
-            "ap1ID": "bd06daa7-d64b-4c83-8da5-817f5c8deb32",
-            "ap2ID": "dfcdd39b-a0c0-4d5d-bda5-386513940570"
+            "ap1ID": "0f4e9bef-7f3f-485f-80fd-5d5ffb033851",
+            "ap2ID": "5e23bb93-9a33-420e-97e4-7cef7e677db5"
         }
     ],
     "unitsKey": "Inches",
