@@ -14,7 +14,12 @@
             "x": 0.9789115646258504,
             "y": 0.5067024128686327,
             "uniqueID": "dfcdd39b-a0c0-4d5d-bda5-386513940570",
-            "ioValues": [],
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": "b2c93699-d37a-4c77-b8f5-45ae671bbe42"
+                }
+            ],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
@@ -231,8 +236,8 @@
         {
             "atomType": "Export",
             "name": "Export",
-            "x": 0.7537414965986394,
-            "y": 0.5656836461126006,
+            "x": 0.8095238095238095,
+            "y": 0.7131367292225201,
             "uniqueID": "54a2a909-8f0a-4705-a6ff-d393774cb5de",
             "ioValues": [
                 {
@@ -257,6 +262,18 @@
             "resolution": 96,
             "importIndex": 0,
             "partName": "Test2"
+        },
+        {
+            "atomType": "Import",
+            "name": "Import",
+            "x": 0.26666666666666666,
+            "y": 0.772117962466488,
+            "uniqueID": "a9af0736-61d5-4993-a499-b3cfa5ffd5f1",
+            "ioValues": [],
+            "description": "Import Atom, let's you choose a type of file to import and use in your design.",
+            "fileName": "path1.svg",
+            "type": "SVG",
+            "SVGwidth": 10
         }
     ],
     "allConnectors": [
@@ -315,6 +332,13 @@
             "ap2Primary": false,
             "ap1ID": "b2c93699-d37a-4c77-b8f5-45ae671bbe42",
             "ap2ID": "54a2a909-8f0a-4705-a6ff-d393774cb5de"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": "b2c93699-d37a-4c77-b8f5-45ae671bbe42",
+            "ap2ID": "dfcdd39b-a0c0-4d5d-bda5-386513940570"
         },
         {
             "ap1Name": "geometry",
