@@ -27,7 +27,7 @@
             "description": "Import Atom, let's you choose a type of file to import and use in your design.",
             "fileName": "abtest.svg",
             "type": "SVG",
-            "SVGwidth": 72
+            "SVGwidth": 63
         },
         {
             "atomType": "Import",
@@ -106,7 +106,7 @@
                 },
                 {
                     "name": "zDist",
-                    "ioValue": 0
+                    "ioValue": 0.12
                 }
             ],
             "description": "Moves a shape laterally in X, Y, Z."
@@ -114,8 +114,8 @@
         {
             "atomType": "Rectangle",
             "name": "Rectangle",
-            "x": 0.3768707482993197,
-            "y": 0.772117962466488,
+            "x": 0.37755102040816324,
+            "y": 0.7667560321715818,
             "uniqueID": "062c46d8-434d-497a-9cb9-f8c53d963757",
             "ioValues": [
                 {
@@ -142,7 +142,7 @@
                 },
                 {
                     "name": "height",
-                    "ioValue": -0.25
+                    "ioValue": 0.25
                 }
             ],
             "description": "Extrudes a 2D shape. Input can be negitive. "
@@ -150,50 +150,26 @@
         {
             "atomType": "Difference",
             "name": "Difference",
-            "x": 0.6829931972789115,
-            "y": 0.6032171581769437,
+            "x": 0.6850340136054421,
+            "y": 0.6058981233243967,
             "uniqueID": "b2c93699-d37a-4c77-b8f5-45ae671bbe42",
             "ioValues": [
                 {
                     "name": "geometry1",
-                    "ioValue": ""
+                    "ioValue": "e031bfe8-93c6-4715-a967-23d8f5125795"
                 },
                 {
                     "name": "geometry2",
-                    "ioValue": "e031bfe8-93c6-4715-a967-23d8f5125795"
+                    "ioValue": "d1372103-42b7-4549-9654-83b7b2fd46a4"
                 }
             ],
             "description": "Subtracts shape two from shape one."
         },
         {
-            "atomType": "Molecule",
-            "name": "Molecule",
-            "x": 0.6625850340136055,
-            "y": 0.4075067024128686,
-            "uniqueID": "03b8aebe-19d2-4511-973d-503526dbb6c3",
-            "ioValues": [],
-            "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
-            "topLevel": false,
-            "allAtoms": [
-                {
-                    "atomType": "Output",
-                    "name": "Output",
-                    "x": 0.98,
-                    "y": 0.5,
-                    "uniqueID": "0dbe556b-a38e-4ce9-8a8b-1e64e873c314",
-                    "ioValues": [],
-                    "description": "Connect geometry here to make it available in the next level up. "
-                }
-            ],
-            "allConnectors": [],
-            "fileTypeVersion": 1,
-            "compiledBom": {}
-        },
-        {
             "atomType": "Extrude",
             "name": "Extrude",
-            "x": 0.5911564625850341,
-            "y": 0.46648793565683644,
+            "x": 0.5224489795918368,
+            "y": 0.4557640750670241,
             "uniqueID": "fb1bc9aa-f539-4859-9198-ac964da0604a",
             "ioValues": [
                 {
@@ -206,6 +182,47 @@
                 }
             ],
             "description": "Extrudes a 2D shape. Input can be negitive. "
+        },
+        {
+            "atomType": "Fusion",
+            "name": "Fusion",
+            "x": 0.6965986394557823,
+            "y": 0.2734584450402145,
+            "uniqueID": "d1372103-42b7-4549-9654-83b7b2fd46a4",
+            "ioValues": [
+                {
+                    "name": "Shape 2",
+                    "ioValue": "117315c5-1386-47b3-8891-36c240aa18d3"
+                }
+            ],
+            "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape",
+            "unionType": "Fusion"
+        },
+        {
+            "atomType": "Move",
+            "name": "Move",
+            "x": 0.5877551020408164,
+            "y": 0.39946380697050937,
+            "uniqueID": "849cb96c-9df6-4519-bdc5-5aacb798d33b",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "fb1bc9aa-f539-4859-9198-ac964da0604a"
+                },
+                {
+                    "name": "xDist",
+                    "ioValue": 0
+                },
+                {
+                    "name": "yDist",
+                    "ioValue": 0
+                },
+                {
+                    "name": "zDist",
+                    "ioValue": 0
+                }
+            ],
+            "description": "Moves a shape laterally in X, Y, Z."
         }
     ],
     "allConnectors": [
@@ -232,6 +249,13 @@
         },
         {
             "ap1Name": "geometry",
+            "ap2Name": "Shape 2",
+            "ap2Primary": false,
+            "ap1ID": "117315c5-1386-47b3-8891-36c240aa18d3",
+            "ap2ID": "d1372103-42b7-4549-9654-83b7b2fd46a4"
+        },
+        {
+            "ap1Name": "geometry",
             "ap2Name": "geometry",
             "ap2Primary": true,
             "ap1ID": "4634f0a7-3daf-4ef3-b56e-1667da466f11",
@@ -246,9 +270,23 @@
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "geometry2",
+            "ap2Name": "geometry1",
             "ap2Primary": false,
             "ap1ID": "e031bfe8-93c6-4715-a967-23d8f5125795",
+            "ap2ID": "b2c93699-d37a-4c77-b8f5-45ae671bbe42"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": "fb1bc9aa-f539-4859-9198-ac964da0604a",
+            "ap2ID": "849cb96c-9df6-4519-bdc5-5aacb798d33b"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry2",
+            "ap2Primary": false,
+            "ap1ID": "d1372103-42b7-4549-9654-83b7b2fd46a4",
             "ap2ID": "b2c93699-d37a-4c77-b8f5-45ae671bbe42"
         }
     ],
