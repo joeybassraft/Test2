@@ -18,37 +18,57 @@
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
-            "atomType": "RegularPolygon",
-            "name": "RegularPolygon",
-            "x": 0.3074829931972789,
-            "y": 0.6193029490616622,
-            "uniqueID": "f2fbb85f-794e-4d73-97d1-b0104ebb49de",
-            "ioValues": [
-                {
-                    "name": "number of sides",
-                    "ioValue": 8
-                },
-                {
-                    "name": "diameter",
-                    "ioValue": 7
-                }
-            ],
-            "description": "Creates a new regular polygon. Corners are on the diameter."
-        },
-        {
             "atomType": "Import",
             "name": "Import",
-            "x": 0.4054421768707483,
-            "y": 0.5549597855227882,
+            "x": 0.41088435374149657,
+            "y": 0.5630026809651475,
             "uniqueID": "7969c197-5bb7-47d6-a8de-05fff34663ec",
             "ioValues": [],
             "description": "Import Atom, let's you choose a type of file to import and use in your design.",
             "fileName": "abtest.svg",
             "type": "SVG",
+            "SVGwidth": 34
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.6333333333333333,
+            "y": 0.6273458445040214,
+            "uniqueID": "f8f489b0-6423-4a2b-a1f6-c02d15f33c5a",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "7969c197-5bb7-47d6-a8de-05fff34663ec"
+                },
+                {
+                    "name": "height",
+                    "ioValue": 0.13
+                }
+            ],
+            "description": "Extrudes a 2D shape. Input can be negitive. "
+        },
+        {
+            "atomType": "Import",
+            "name": "Import",
+            "x": 0.41156462585034015,
+            "y": 0.3646112600536193,
+            "uniqueID": "ccdd557e-1584-4dd5-bedf-337b066b80cf",
+            "ioValues": [],
+            "description": "Import Atom, let's you choose a type of file to import and use in your design.",
+            "fileName": "Bassraft.svg",
+            "type": "SVG",
             "SVGwidth": 10
         }
     ],
-    "allConnectors": [],
+    "allConnectors": [
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": "7969c197-5bb7-47d6-a8de-05fff34663ec",
+            "ap2ID": "f8f489b0-6423-4a2b-a1f6-c02d15f33c5a"
+        }
+    ],
     "unitsKey": "Inches",
     "fileTypeVersion": 1,
     "compiledBom": {},
