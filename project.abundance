@@ -18,14 +18,32 @@
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
+            "atomType": "RegularPolygon",
+            "name": "RegularPolygon",
+            "x": 0.3074829931972789,
+            "y": 0.6193029490616622,
+            "uniqueID": "f2fbb85f-794e-4d73-97d1-b0104ebb49de",
+            "ioValues": [
+                {
+                    "name": "number of sides",
+                    "ioValue": 8
+                },
+                {
+                    "name": "diameter",
+                    "ioValue": 7
+                }
+            ],
+            "description": "Creates a new regular polygon. Corners are on the diameter."
+        },
+        {
             "atomType": "Import",
             "name": "Import",
-            "x": 0.336734693877551,
-            "y": 0.5978552278820376,
-            "uniqueID": "b12e3265-4751-48aa-922b-208f6c228c46",
+            "x": 0.4054421768707483,
+            "y": 0.5549597855227882,
+            "uniqueID": "7969c197-5bb7-47d6-a8de-05fff34663ec",
             "ioValues": [],
             "description": "Import Atom, let's you choose a type of file to import and use in your design.",
-            "fileName": "g1.svg",
+            "fileName": "abtest.svg",
             "type": "SVG",
             "SVGwidth": 10
         }
